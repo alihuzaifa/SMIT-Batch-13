@@ -1,0 +1,50 @@
+/* body {
+    background-color: red;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+} */
+
+/* h1 {
+    font-family: serif;
+    font-family: sans-serif;
+    font-family: monospace;
+} */
+
+/* p{
+    color: aqua;
+} */
+
+/* #unique {
+    color: aqua;
+} */
+
+/* 
+#parent>.child {
+    background-color: rgb(36, 27, 27);
+    color: black;
+}
+
+p span {
+    color: rgb(74, 74, 74);
+} */
+
+/* div p {
+    color: blue;
+} */
+
+/* 
+h1+p {
+    background-color: forestgreen;
+    color: white;
+} */
+
+/* h1~p {
+    background-color: forestgreen;
+    color: white;
+} */
+
+
+body {
+    background-color: rgba(134, 13, 13, 0);
+    color: #ffffff;
+}

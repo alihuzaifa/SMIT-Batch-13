@@ -1,0 +1,53 @@
+/* a:active {
+    color: green;
+}
+
+input:focus {
+    background-color: yellow;
+    border: 5px solid red;
+} */
+
+
+/* p {
+    border: 1px solid black;
+    max-width: 300px;
+    max-height: 200px;
+
+   
+
+    min-width: 1000px;
+    min-height: 1000px;
+
+    width: 500px;
+    height: 500px;
+} */
+
+p {
+    width: 500px;
+    height: 300px;
+    /* overflow: hidden; */
+    /* overflow: scroll; */
+    overflow-y: scroll;
+    border: 5px solid red;
+    /* border-width: 5px;
+    border-style: dashed;
+    border-color: red; */
+    border-top-width: 10px;
+    border-left-width: 2px;
+    border-bottom-width: 10px;
+    border-right-width: 2px;
+    border-style: dashed;
+    border-color: red;
+    border-left-style: dotted;
+    padding: 0px;
+    padding: 10px 20px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    /* top right bottom left  */
+    padding: 10px 5px 10px 5px;
+    /* margin: 30px 10px; */
+    /* margin: 10px 5px 30px 60px; */
+    margin: 20px auto;
+}

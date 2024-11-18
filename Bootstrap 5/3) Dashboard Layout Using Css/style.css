@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.dashboard {
+  display: flex;
+  height: 100%;
+}
+
+.sidebar {
+  background-color: #180f615e;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.content {
+  margin-left: 250px;
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aquamarine;
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}

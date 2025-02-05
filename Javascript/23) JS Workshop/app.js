@@ -1,91 +1,100 @@
-// Beginner Exercises:
-// Declare Variables and Log to Console
-// Declare variables of different types (string, number, boolean) and log them to the console.
+// function fibonacci(n) {
+//   let a = 0;
+//   let b = 1;
 
-// Basic Arithmetic Operations
-// Write a program to add, subtract, multiply, and divide two numbers.
+//   for (let i = 0; i < n; i++) {
+//     let next = a + b;
+//     a = b;
+//     b = next;
+//   }
 
-// Odd or Even Number
-// Write a function that checks if a number is odd or even.
+//   console.log(a, b);
+// }
 
-// Find the Length of a String
-// Write a program that outputs the length of a given string.
+// fibonacci(10);
 
-// String Concatenation
-// Concatenate two strings and print the result.
+// var number = 10;
+// var myName = "Ali Huzaifa";
+// var isTeenage = false;
+// console.log(number, myName, isTeenage);
 
-// Convert String to Number
-// Convert a string into a number and perform arithmetic operations on it.
+// function calculator(number1, number2, operator) {
+//   if (operator === "+") {
+//     return number1 + number2;
+//   } else if (operator === "-") {
+//     return number1 - number2;
+//   } else if (operator === "*") {
+//     return number1 * number2;
+//   } else if (operator === "/") {
+//     return number1 / number2;
+//   } else if (operator === "%") {
+//     return number1 % number2;
+//   } else {
+//     return "Invalid Operator";
+//   }
+// }
 
-// Simple Conditional Statement (if/else)
-// Create a function that checks if a number is positive, negative, or zero.
+// var sum = calculator(10, 10, "+");
+// var sub = calculator(10, 10, "-");
+// var mul = calculator(10, 10, "*");
+// var div = calculator(10, 10, "/");
+// console.log(sum);
+// console.log(sub);
+// console.log(mul);
+// console.log(div);
 
-// Simple Looping (for)
-// Write a program that prints numbers from 1 to 10 using a for loop.
+// var number = +prompt("Enter a Number", 0);
+// if (number % 2 === 0) {
+//   console.log("Even Number");
+// } else {
+//   console.log("Odd Number");
+// }
 
-// Sum of Array Elements
-// Write a program to find the sum of all elements in an array.
+// var sentence = "A quick brown fox jumps over the lazy dog";
+// var count = 0;
+// for (var i = 0; i < sentence.length; i++) {
+//   count++;
+// }
+// console.log(count);
 
-// Reverse a String
-// Write a function that reverses a string manually (without using the reverse() method).
+// var firstName = "Ali ";
+// var lastName = "Huzaifa";
+// console.log(firstName + lastName);
 
-// Find the Largest Number in an Array
-// Write a function that finds and returns the largest number in an array.
+// var number1 = +"10";
+// var number2 = +"20";
+// console.log(number1 + number2);
 
-// Check if a Number is Divisible by 3 and 5
-// Write a program that checks if a number is divisible by both 3 and 5.
+// function check(number) {
+//   if (number === 0) {
+//     return "Zero";
+//   } else if (number > 0) {
+//     return "Positive";
+//   } else {
+//     return "Negative";
+//   }
+// }
 
-// Print Fibonacci Sequence
-// Write a program to print the Fibonacci sequence up to a given number.
+// var result = check(1);
+// console.log(result);
 
-// Remove Duplicates from an Array
-// Write a function that removes duplicate values from an array.
+// for (var i = 1; i <= 10; i++) {
+//   console.log(i);
+// }
 
-// Count Occurrences of a Character in a String
-// Write a function to count how many times a specific character appears in a string.
+// var numbers = [289, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// var count = 0;
+// for (var i = 0; i < numbers.length; i++) {
+//   var item = numbers[i];
+//   count = count + item;
+// }
+// console.log(count);
 
-// Intermediate Exercises:
-// Find the Smallest Element in an Array
-// Write a function that finds and returns the smallest number in an array.
-
-// Check if a String is Palindrome
-// Write a function to check if a string is a palindrome.
-
-// Sum of Digits in a Number
-// Write a function that calculates the sum of the digits of a number.
-
-// Find the Index of an Element in an Array
-// Write a function to find the index of a specific element in an array.
-
-// Merge Two Arrays
-// Write a function to merge two arrays into one array.
-
-// Create a Simple Calculator
-// Create a function that takes two numbers and an operator (e.g., +, -, *, /) and returns the result.
-
-// Check if a Year is Leap Year
-// Write a function that determines if a year is a leap year.
-
-// Count the Number of Vowels in a String
-// Write a function that counts the number of vowels in a string.
-
-// Convert Celsius to Fahrenheit
-// Write a function that converts Celsius to Fahrenheit.
-
-// Find the Second Largest Element in an Array
-// Write a function that finds the second-largest element in an array.
-
-// Sort an Array in Ascending Order
-// Write a function to sort an array of numbers in ascending order.
-
-// Filter Even Numbers from an Array
-// Write a function that filters out all even numbers from an array.
-
-// Check if a String Contains a Substring
-// Write a function that checks if a string contains a specific substring.
-
-// Create a To-Do List
-// Create a simple to-do list where you can add tasks (without using a database).
-
-// Create a Function that Counts the Words in a String
-// Write a function to count the number of words in a string.
+var sentence = "SMIT";
+var reverseSentence = "";
+// 4-1 = 3
+for (var i = sentence.length - 1; i >= 0; i--) {
+  var item = sentence[i];
+  reverseSentence += item;
+}
+console.log(reverseSentence);

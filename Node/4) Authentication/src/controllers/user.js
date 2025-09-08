@@ -1,4 +1,6 @@
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+const secret = "13253mjbnmbcvbnvcxur76547e3";
 const users = [];
 
 const createUser = async (req, res) => {
@@ -26,6 +28,38 @@ const createUser = async (req, res) => {
   });
 };
 
-const signinUser = (req, res) => {};
+const signinUser = async (req, res) => {
+  const { email, password } = req.body;
+  const userobj = users.find((obj) => obj.email === email);
+  if (!userobj) {
+    return res.send({
+      message: `User Not Found`,
+    });
+  }
 
-export { createUser, signinUser };
+  const passwordMatched = await bcrypt.compare(password, userobj.password);
+  if (!passwordMatched) {
+    return res.send({
+      message: `Invalid Password`,
+    });
+  }
+
+  const payload = {
+    id: userobj?.id,
+    email: userobj?.email,
+  };
+
+  const token = jwt.sign(payload, secret, { expiresIn: "1d" });
+  return res.send({
+    token,
+    message: "Login Successfull",
+  });
+};
+
+const getAllUsers = (_, res) => {
+  return res.send({
+    users,
+  });
+};
+
+export { createUser, signinUser, getAllUsers };

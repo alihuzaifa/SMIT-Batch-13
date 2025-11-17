@@ -18,7 +18,30 @@ function App() {
   const [isLoading, setIsLoading] = useState(false)
 
   const handleSend = async () => {
-    
+    if (!input.trim() || isLoading) return
+
+    const userMessage: Message = { role: 'user', content: input.trim() }
+    setMessages(prev => [...prev, userMessage])
+    setInput('')
+    setIsLoading(true)
+
+    try {
+      const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' })
+      const chat = model.startChat({ history: [] })
+      const result = await chat.sendMessage(userMessage.content)
+      const text = result.response.text()
+
+      const assistantMessage: Message = {
+        role: 'assistant',
+        content: text
+      }
+
+      setMessages(prev => [...prev, assistantMessage])
+    } catch {
+      setMessages(prev => [...prev, { role: 'assistant', content: 'Sorry, there was an error.' }])
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
